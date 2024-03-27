@@ -20,15 +20,12 @@ public class FoodItem {
 
     private String itemDescription;
 
-
     private Boolean isVeg;
 
     private Number price;
-
     private Integer restaurantId;
 
     @Column(nullable = false, columnDefinition = "INT DEFAULT 0")
     private Integer quantity;
-
 
 }

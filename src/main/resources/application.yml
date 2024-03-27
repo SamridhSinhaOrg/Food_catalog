@@ -18,5 +18,5 @@ spring:
       show-sql: true
 
   application:
-    name: FOOD_CATALOG_SERVICE
+    name: FOOD-CATALOG-SERVICE
 

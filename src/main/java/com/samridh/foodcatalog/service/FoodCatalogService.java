@@ -5,7 +5,6 @@ import com.samridh.foodcatalog.dto.FoodCatalogPage;
 import com.samridh.foodcatalog.dto.FoodItemDTO;
 import com.samridh.foodcatalog.dto.Restaurant;
 import com.samridh.foodcatalog.entity.FoodItem;
-import com.samridh.foodcatalog.exception.FoodItemNotFoundException;
 import com.samridh.foodcatalog.mapper.FoodItemMapper;
 import com.samridh.foodcatalog.repository.FoodItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +41,8 @@ public class FoodCatalogService {
     }
 
     private Restaurant fetchRestaurantDetailsFrmRestaurantMS(Integer restaurantId) {
-        return restTemplate.getForObject("http://RESTAURANT-SERVICE/restaurant/fetchRestaurantById/" + restaurantId, Restaurant.class);
+        return restTemplate.getForObject("http://RESTAURANT-SERVICE/restaurant/fetchRestaurantById/" +
+                restaurantId, Restaurant.class);
     }
 
     private List<FoodItem> fetchFoodItemList(Integer restaurantId) {
